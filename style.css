@@ -1,13 +1,13 @@
 .container {
-    
-    height: 80vh;
 
+  height: calc(100vh - 20vh);
   }
 
 body {
     font-family: 'Dongle', sans-serif;
     font-size: 50px;
     margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -15,6 +15,8 @@ body {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    height: -webkit-fill-available;
+
   }
 
   h1 {
@@ -87,13 +89,17 @@ body {
   }
 
   #grises{
-      padding: 0px;
-      display: inline-flex;
+    position: fixed;
+    bottom: 0px;
+    padding: 0px;
+    margin: 0px;
+    display: inline-flex;
   }
 
   .gris{
+    padding: 0px;
     margin: 0px;
-    height: 20vh;
+    height: 19vh;
     writing-mode: tb-rl;
     font-size: 3vh;
     text-align: center;
