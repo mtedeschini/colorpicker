@@ -33,15 +33,12 @@ var cambiarFondo = (min, max) => {
 
   var codigoColor = "RGBA(" + numCol1 + "," + numCol2 + "," + numCol3 + ")"
 
-
-
 var rgb1 = "RGBA(" + (numCol1-25) + "," + (numCol2-25) + "," + (numCol3-25) + ")";
 var rgb2 = "RGBA(" + (numCol1-15) + "," + (numCol2-15) + "," + (numCol3-15) + ")";
 var rgb3 = "RGBA(" + (numCol1-10) + "," + (numCol2-10) + "," + (numCol3-10) + ")";
 var rgb4 = "RGBA(" + (numCol1+10) + "," + (numCol2+10) + "," + (numCol3+10) + ")";
 var rgb5 = "RGBA(" + (numCol1+15) + "," + (numCol2+15) + "," + (numCol3+15) + ")";
 var rgb6 = "RGBA(" + (numCol1+25) + "," + (numCol2+25) + "," + (numCol3+25) + ")";
-
 
  gris1.style["background-color"] = rgb1;
  gris2.style["background-color"] = rgb2;
@@ -57,7 +54,10 @@ var rgb6 = "RGBA(" + (numCol1+25) + "," + (numCol2+25) + "," + (numCol3+25) + ")
  gris5.innerHTML = rgb5;
  gris6.innerHTML = rgb6;
 
- document.querySelector(".gris").style["color"] = colorTexto;
+ var grises = document.getElementsByClassName('gris');
+ for (let i = 0; i < grises.length; i++){
+     grises[i].style["color"] = colorTexto;
+ }
 
 }
 
